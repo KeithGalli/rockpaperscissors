@@ -1,11 +1,11 @@
-import random
+import random, sys
 
 while True: 
 	print('Make your choice:')
 	choice = str(input())
 	choice = choice.lower()
 
-	print("My choice is", choice)
+	print(f"My choice is{choice}")
 
 	choices = ['rock', 'paper', 'scissors']
 
@@ -31,6 +31,9 @@ while True:
 			elif computer_choice == 'paper':
 				print('You win!!!!! congrats :)')
 	else:
-		print('invalid choice, try again')
+		print('invalid choice, try again or enter any key to exit')
+		exc = input()
+		if exc:
+			sys.exit()
 
 	print()
